@@ -5,26 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You're In! | KeyRD</title>
   <style>
+    :root {
+      --primary: #0070f3;
+      --background: #f9f9f9;
+      --text: #333;
+      --radius: 8px;
+    }
+
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
       padding: 2rem;
-      max-width: 800px;
+      background: var(--background);
+      color: var(--text);
+      max-width: 700px;
       margin: auto;
-      background-color: #f9f9f9;
       text-align: center;
     }
-    h1 { color: #0070f3; }
-    a {
+
+    h1 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    a.button {
       display: inline-block;
-      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--primary);
+      color: white;
       text-decoration: none;
-      color: #0070f3;
+      border-radius: var(--radius);
+      font-weight: 600;
+    }
+
+    a.button:hover {
+      background: #005bb5;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <h1>You're in!</h1>
-  <p>Thanks for submitting your profile. We'll be in touch soon.</p>
-  <p><a href="/">Back to homepage</a></p>
+  <p>Thanks for submitting your profile. You’re now part of the KeyRD beta.</p>
+  <p>We’ll reach out with next steps and early access details soon.</p>
+  <a href="/" class="button">Back to Homepage</a>
+
+  <footer>
+    &copy; 2025 KeyRD — Personalized nutrition. No food logging. Just clarity.
+  </footer>
 </body>
 </html>
