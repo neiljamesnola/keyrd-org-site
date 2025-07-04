@@ -23,6 +23,11 @@
       text-align: center;
     }
 
+    header img {
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+
     h1 {
       font-size: 2.5rem;
       color: var(--error);
@@ -53,15 +58,29 @@
       font-size: 0.85rem;
       color: #777;
     }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <a href="/"><img src="assets/logo.png" alt="KeyRD Logo" /></a>
+  </header>
+
   <h1>404 – Page Not Found</h1>
   <p>Oops! The page you’re looking for doesn’t exist or has moved.</p>
   <a href="/" class="button">Return to Homepage</a>
 
   <footer>
-    &copy; 2025 KeyRD — Designed for clarity, built for behavior change.
+    &copy; 2025 KeyRD — Designed for clarity, built for behavior change.<br />
+    Need help? <a href="mailto:support@keyrd.org">Contact Support</a>
   </footer>
 </body>
 </html>
