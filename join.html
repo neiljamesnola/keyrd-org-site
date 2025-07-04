@@ -3,48 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KeyRD Onboarding</title>
+  <title>Join the Beta | KeyRD</title>
   <style>
+    :root {
+      --primary: #0070f3;
+      --background: #f9f9f9;
+      --text: #333;
+      --radius: 8px;
+    }
+
     body {
-      font-family: sans-serif;
-      margin: 2rem;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--background);
+      color: var(--text);
       max-width: 800px;
       margin: auto;
     }
-    h1 { color: #0070f3; }
-    nav {
+
+    header {
       margin-bottom: 2rem;
     }
+
+    h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.description {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    nav {
+      background: #e6f0fc;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+    }
+
     nav a {
       margin-right: 1rem;
       text-decoration: none;
-      color: #0070f3;
+      color: var(--primary);
+      font-weight: 500;
     }
-    label {
+
+    form label {
       display: block;
       margin-top: 1rem;
       font-weight: bold;
     }
+
     input, select, textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.6rem;
       margin-top: 0.25rem;
-      border-radius: 5px;
+      border-radius: var(--radius);
       border: 1px solid #ccc;
+      font-size: 1rem;
     }
-    .submit {
+
+    button.submit {
       margin-top: 2rem;
-      padding: 1rem;
-      background: #0070f3;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
       color: white;
+      font-size: 1rem;
+      font-weight: bold;
       border: none;
-      border-radius: 5px;
+      border-radius: var(--radius);
       cursor: pointer;
     }
-    .submit:hover {
+
+    button.submit:hover {
       background: #005bb5;
     }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+    }
+
     .optional {
       font-weight: normal;
       color: #777;
@@ -52,63 +97,71 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/join.html">Join</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+  <header>
+    <h1>Join the KeyRD Beta</h1>
+    <p class="description">Help us shape the future of precision nutrition. Your profile allows us to tailor nudges to your unique goals, lifestyle, and preferences.</p>
 
-  <h1>Join the Beta</h1>
-  <p>Please complete the form to join KeyRD. We use this info to personalize your experience.</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/join.html">Join</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <form id="onboarding-form" method="POST" action="#">
-    <!-- Identity -->
-    <label for="email">Email *</label>
-    <input type="email" name="email" id="email" required />
+  <main>
+    <form method="POST" action="/success.html">
+      <!-- Identity -->
+      <label for="email">Email *</label>
+      <input type="email" name="email" id="email" required />
 
-    <label for="consent_to_track">Consent to Data Tracking *</label>
-    <select name="consent_to_track" id="consent_to_track" required>
-      <option value="">Select...</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
+      <label for="consent_to_track">Consent to Data Tracking *</label>
+      <select name="consent_to_track" id="consent_to_track" required>
+        <option value="">Select...</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
 
-    <label for="device_type">Device Type *</label>
-    <select name="device_type" id="device_type" required>
-      <option value="">Select...</option>
-      <option value="iOS">iOS</option>
-      <option value="Android">Android</option>
-      <option value="Other">Other</option>
-    </select>
+      <label for="device_type">Device Type *</label>
+      <select name="device_type" id="device_type" required>
+        <option value="">Select...</option>
+        <option value="iOS">iOS</option>
+        <option value="Android">Android</option>
+        <option value="Other">Other</option>
+      </select>
 
-    <label for="readiness_stage">Stage of Change *</label>
-    <select name="readiness_stage" id="readiness_stage" required>
-      <option value="">Select...</option>
-      <option value="precontemplation">Precontemplation</option>
-      <option value="contemplation">Contemplation</option>
-      <option value="preparation">Preparation</option>
-      <option value="action">Action</option>
-      <option value="maintenance">Maintenance</option>
-    </select>
+      <!-- Psychographics -->
+      <label for="readiness_stage">Stage of Change *</label>
+      <select name="readiness_stage" id="readiness_stage" required>
+        <option value="">Select...</option>
+        <option value="precontemplation">Precontemplation</option>
+        <option value="contemplation">Contemplation</option>
+        <option value="preparation">Preparation</option>
+        <option value="action">Action</option>
+        <option value="maintenance">Maintenance</option>
+      </select>
 
-    <label for="goal_type">Primary Health Goal *</label>
-    <select name="goal_type" id="goal_type" required>
-      <option value="">Select...</option>
-      <option value="weight_loss">Weight Loss</option>
-      <option value="labs">Improve Labs</option>
-      <option value="bp">Lower Blood Pressure</option>
-      <option value="energy">Increase Energy</option>
-      <option value="mood">Improve Mood</option>
-    </select>
+      <label for="goal_type">Primary Health Goal *</label>
+      <select name="goal_type" id="goal_type" required>
+        <option value="">Select...</option>
+        <option value="weight_loss">Weight Loss</option>
+        <option value="labs">Improve Labs</option>
+        <option value="bp">Lower Blood Pressure</option>
+        <option value="energy">Increase Energy</option>
+        <option value="mood">Improve Mood</option>
+      </select>
 
-    <label for="why_this_goal">Why This Goal? *</label>
-    <textarea name="why_this_goal" id="why_this_goal" rows="3" required></textarea>
+      <label for="why_this_goal">Why This Goal? *</label>
+      <textarea name="why_this_goal" id="why_this_goal" rows="3" required></textarea>
 
-    <!-- Submit -->
-    <button type="submit" class="submit">Submit</button>
-  </form>
+      <!-- Submit -->
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 KeyRD. Privacy-respecting, science-based, user-powered.
+  </footer>
 </body>
-  <form method="POST" action="/success.html">
 </html>
