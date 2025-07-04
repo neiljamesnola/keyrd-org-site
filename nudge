@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is a Nudge? | KeyRD</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #0070f3;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #333;
+    }
+    p {
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 1.25rem;
+    }
+    nav {
+      margin-top: 2rem;
+    }
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #0070f3;
+    }
+  </style>
+</head>
+<body>
+  <h1>What Is a Nudge?</h1>
+  
+  <nav>
+    <a href="/">Home</a>
+    <a href="/join.html">Join</a>
+    <a href="/nudge.html">What’s a Nudge?</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <p>
+    A <strong>nudge</strong> is a subtle prompt designed to steer you toward healthier choices—without pressure, judgment, or the burden of food logging. KeyRD nudges are personalized and adaptive, using real-world data to support your health goals over time.
+  </p>
+
+  <h2>How Nudges Work in KeyRD</h2>
+  <ul>
+    <li><strong>Clinically Informed:</strong> Nudges are grounded in behavior change theory, Medical Nutrition Therapy guidelines, and your chronic condition profile.</li>
+    <li><strong>Context-Aware:</strong> We use passively collected signals (e.g., time, device, wake/sleep cycles, quiet hours, and location patterns) to deliver nudges when they’re most likely to help.</li>
+    <li><strong>Pattern Learning:</strong> Over time, KeyRD learns your preferences, response patterns, and optimal timing—just like a smart coach.</li>
+    <li><strong>Tone-Matched:</strong> You choose your preferred nudge style (gentle, motivating, directive, or humorous). We’ll speak your language.</li>
+    <li><strong>Location-Based:</strong> Nudges may change depending on whether you’re near a grocery store, restaurant, or home kitchen—helping bridge intention with opportunity.</li>
+  </ul>
+
+  <h2>Examples</h2>
+  <p>
+    At 11:30 AM, just before your usual lunch, you might receive: <em>"You're near your usual grocery stop. Want a fast lunch idea that fits your goal?"</em>
+  </p>
+  <p>
+    On a stressful day, a gentle nudge might say: <em>"Rough morning? A good snack now might prevent late-day cravings."</em>
+  </p>
+
+  <h2>Why It Matters</h2>
+  <p>
+    Behavior change is hardest when it depends on willpower alone. Nudges reduce friction. When timed right, they transform intention into action—without you needing to track every bite.
+  </p>
+
+  <p>
+    Want to try it? <a href="/join.html">Join the beta</a>.
+  </p>
+</body>
+</html>
