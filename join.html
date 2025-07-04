@@ -11,7 +11,6 @@
       --text: #333;
       --radius: 8px;
     }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -21,43 +20,34 @@
       max-width: 800px;
       margin: auto;
     }
-
-    header {
-      margin-bottom: 2rem;
-    }
-
+    header { margin-bottom: 2rem; }
     h1 {
       color: var(--primary);
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
     }
-
     p.description {
       font-size: 1rem;
       margin-bottom: 1.5rem;
       color: #444;
     }
-
     nav {
       background: #e6f0fc;
       padding: 0.75rem 1rem;
       border-radius: var(--radius);
       margin-bottom: 2rem;
     }
-
     nav a {
       margin-right: 1rem;
       text-decoration: none;
       color: var(--primary);
       font-weight: 500;
     }
-
-    form label {
+    label {
       display: block;
       margin-top: 1rem;
       font-weight: bold;
     }
-
     input, select, textarea {
       width: 100%;
       padding: 0.6rem;
@@ -66,7 +56,10 @@
       border: 1px solid #ccc;
       font-size: 1rem;
     }
-
+    .optional {
+      font-weight: normal;
+      color: #777;
+    }
     button.submit {
       margin-top: 2rem;
       padding: 0.75rem 1.5rem;
@@ -78,29 +71,19 @@
       border-radius: var(--radius);
       cursor: pointer;
     }
-
-    button.submit:hover {
-      background: #005bb5;
-    }
-
+    button.submit:hover { background: #005bb5; }
     footer {
       margin-top: 3rem;
       font-size: 0.85rem;
       color: #777;
       text-align: center;
     }
-
-    .optional {
-      font-weight: normal;
-      color: #777;
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>Join the KeyRD Beta</h1>
-    <p class="description">Help us shape the future of precision nutrition. Your profile allows us to tailor nudges to your unique goals, lifestyle, and preferences.</p>
-
+    <p class="description">Help us shape the future of precision nutrition. This onboarding form ensures your experience is customized from day one.</p>
     <nav>
       <a href="/">Home</a>
       <a href="/join.html">Join</a>
@@ -109,31 +92,44 @@
       <a href="/contact.html">Contact</a>
     </nav>
   </header>
-
   <main>
     <form method="POST" action="/success.html">
-      <!-- Identity -->
-      <label for="email">Email *</label>
-      <input type="email" name="email" id="email" required />
-
-      <label for="consent_to_track">Consent to Data Tracking *</label>
-      <select name="consent_to_track" id="consent_to_track" required>
+      <!-- Identity & Consent -->
+      <label>Email *</label>
+      <input type="email" name="email" required />
+      <label>Consent to Data Tracking *</label>
+      <select name="consent_to_track" required>
         <option value="">Select...</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
       </select>
-
-      <label for="device_type">Device Type *</label>
-      <select name="device_type" id="device_type" required>
+      <label>Device Type *</label>
+      <select name="device_type" required>
         <option value="">Select...</option>
         <option value="iOS">iOS</option>
         <option value="Android">Android</option>
-        <option value="Other">Other</option>
+        <option value="Wearable">Wearable</option>
       </select>
+      <label>OS Version *</label>
+      <input type="text" name="os_version" required />
 
-      <!-- Psychographics -->
-      <label for="readiness_stage">Stage of Change *</label>
-      <select name="readiness_stage" id="readiness_stage" required>
+      <!-- Demographics -->
+      <label>Age *</label>
+      <input type="number" name="age" min="10" max="120" required />
+      <label>Sex *</label>
+      <select name="sex" required>
+        <option value="">Select...</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="nonbinary">Nonbinary</option>
+        <option value="prefer_not_to_say">Prefer not to say</option>
+      </select>
+      <label>Zip Code *</label>
+      <input type="text" name="zip_code" required />
+
+      <!-- Psychographic & Behavioral Profile -->
+      <label>Stage of Change *</label>
+      <select name="readiness_stage" required>
         <option value="">Select...</option>
         <option value="precontemplation">Precontemplation</option>
         <option value="contemplation">Contemplation</option>
@@ -141,9 +137,8 @@
         <option value="action">Action</option>
         <option value="maintenance">Maintenance</option>
       </select>
-
-      <label for="goal_type">Primary Health Goal *</label>
-      <select name="goal_type" id="goal_type" required>
+      <label>Primary Health Goal *</label>
+      <select name="goal_type" required>
         <option value="">Select...</option>
         <option value="weight_loss">Weight Loss</option>
         <option value="labs">Improve Labs</option>
@@ -151,15 +146,99 @@
         <option value="energy">Increase Energy</option>
         <option value="mood">Improve Mood</option>
       </select>
+      <label>Why This Goal? *</label>
+      <textarea name="why_this_goal" rows="3" required></textarea>
+      <label>Nudge Style *</label>
+      <select name="nudge_style" required>
+        <option value="">Select...</option>
+        <option value="gentle">Gentle</option>
+        <option value="motivating">Motivating</option>
+        <option value="directive">Directive</option>
+        <option value="humorous">Humorous</option>
+      </select>
+      <label>Nudge Frequency Cap (1–5 per day) *</label>
+      <input type="number" name="nudge_frequency_cap" min="1" max="5" required />
+      <label>Quiet Hours (e.g. 21:00–07:00) *</label>
+      <input type="text" name="quiet_hours" required />
 
-      <label for="why_this_goal">Why This Goal? *</label>
-      <textarea name="why_this_goal" id="why_this_goal" rows="3" required></textarea>
+      <!-- Diet Preferences -->
+      <label>Diet Type *</label>
+      <select name="diet_type" required>
+        <option value="">Select...</option>
+        <option value="omnivore">Omnivore</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="pescatarian">Pescatarian</option>
+        <option value="dash">DASH</option>
+      </select>
+      <label>Food Allergies *</label>
+      <textarea name="food_allergies" required></textarea>
+      <label>Food Avoidances *</label>
+      <textarea name="food_avoidances" required></textarea>
+      <label>Food Likes <span class="optional">(Optional)</span></label>
+      <textarea name="food_likes"></textarea>
+      <label>Food Dislikes <span class="optional">(Optional)</span></label>
+      <textarea name="food_dislikes"></textarea>
+      <label>Religious Diet Rules <span class="optional">(Optional)</span></label>
+      <textarea name="religious_diet_rules"></textarea>
+
+      <!-- Clinical -->
+      <label>Chronic Conditions *</label>
+      <textarea name="chronic_conditions" required></textarea>
+      <label>Medication Schedule <span class="optional">(Optional)</span></label>
+      <textarea name="med_schedule"></textarea>
+
+      <!-- Schedule & Logistics -->
+      <label>Wake Time *</label>
+      <input type="time" name="wake_time" required />
+      <label>Sleep Time *</label>
+      <input type="time" name="sleep_time" required />
+      <label>Work Hours *</label>
+      <input type="text" name="work_hours" required />
+      <label>Meal Windows <span class="optional">(Optional)</span></label>
+      <input type="text" name="meal_windows" />
+      <label>Transportation Access <span class="optional">(Optional)</span></label>
+      <select name="transportation_access">
+        <option value="">Select...</option>
+        <option value="car">Own Vehicle</option>
+        <option value="public">Public Transport</option>
+        <option value="none">No Access</option>
+      </select>
+
+      <!-- Socio-Demographics -->
+      <label>Education Level <span class="optional">(Optional)</span></label>
+      <select name="education_level">
+        <option value="">Select...</option>
+        <option value="lt_hs">Less than High School</option>
+        <option value="hs">High School</option>
+        <option value="some_college">Some College</option>
+        <option value="college">College Graduate</option>
+        <option value="grad">Graduate Degree</option>
+      </select>
+      <label>Financial Status <span class="optional">(Optional)</span></label>
+      <select name="financial_status">
+        <option value="">Select...</option>
+        <option value="low">Low</option>
+        <option value="moderate">Moderate</option>
+        <option value="high">High</option>
+      </select>
+
+      <!-- Daily Check-in (Optional) -->
+      <label>Mood <span class="optional">(Optional)</span></label>
+      <input type="range" name="mood" min="1" max="5" />
+      <label>Stress Level <span class="optional">(Optional)</span></label>
+      <input type="range" name="stress_level" min="1" max="5" />
+      <label>Hunger <span class="optional">(Optional)</span></label>
+      <input type="range" name="hunger" min="1" max="5" />
+      <label>Cravings <span class="optional">(Optional)</span></label>
+      <input type="range" name="cravings" min="1" max="5" />
+      <label>Energy Level <span class="optional">(Optional)</span></label>
+      <input type="range" name="energy_level" min="1" max="5" />
 
       <!-- Submit -->
-      <button type="submit" class="submit">Submit</button>
+      <button type="submit" class="submit">Submit Profile</button>
     </form>
   </main>
-
   <footer>
     &copy; 2025 KeyRD. Privacy-respecting, science-based, user-powered.
   </footer>
