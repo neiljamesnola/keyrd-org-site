@@ -1,0 +1,77 @@
+<!-- join.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KeyRD Onboarding</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; background: #f9f9f9; max-width: 800px; margin: auto; }
+    h1 { color: #0070f3; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, select, textarea {
+      width: 100%; padding: 0.5rem; margin-top: 0.25rem;
+      border-radius: 5px; border: 1px solid #ccc;
+    }
+    .submit {
+      margin-top: 2rem; padding: 1rem; background: #0070f3; color: white;
+      border: none; border-radius: 5px; cursor: pointer;
+    }
+    .submit:hover { background: #005bb5; }
+    .optional { font-weight: normal; color: #777; }
+  </style>
+</head>
+<body>
+  <h1>Join the Beta</h1>
+  <p>Please complete the form to join KeyRD. We use this info to personalize your experience.</p>
+
+  <form id="onboarding-form" method="POST" action="#">
+    <!-- You can use a real endpoint later -->
+
+    <!-- Identity -->
+    <label for="email">Email *</label>
+    <input type="email" name="email" id="email" required />
+
+    <label for="consent_to_track">Consent to Data Tracking *</label>
+    <select name="consent_to_track" id="consent_to_track" required>
+      <option value="">Select...</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="device_type">Device Type *</label>
+    <select name="device_type" id="device_type" required>
+      <option value="">Select...</option>
+      <option value="iOS">iOS</option>
+      <option value="Android">Android</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="readiness_stage">Stage of Change *</label>
+    <select name="readiness_stage" id="readiness_stage" required>
+      <option value="">Select...</option>
+      <option value="precontemplation">Precontemplation</option>
+      <option value="contemplation">Contemplation</option>
+      <option value="preparation">Preparation</option>
+      <option value="action">Action</option>
+      <option value="maintenance">Maintenance</option>
+    </select>
+
+    <label for="goal_type">Primary Health Goal *</label>
+    <select name="goal_type" id="goal_type" required>
+      <option value="">Select...</option>
+      <option value="weight_loss">Weight Loss</option>
+      <option value="labs">Improve Labs</option>
+      <option value="bp">Lower Blood Pressure</option>
+      <option value="energy">Increase Energy</option>
+      <option value="mood">Improve Mood</option>
+    </select>
+
+    <label for="why_this_goal">Why This Goal? *</label>
+    <textarea name="why_this_goal" id="why_this_goal" rows="3" required></textarea>
+
+    <!-- Submit -->
+    <button type="submit" class="submit">Submit</button>
+  </form>
+</body>
+</html>
