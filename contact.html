@@ -1,32 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | KeyRD</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; max-width: 800px; margin: auto; }
-    h1 { color: #0070f3; }
+    :root {
+      --primary: #0070f3;
+      --background: #f9f9f9;
+      --text: #333;
+      --radius: 8px;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--background);
+      color: var(--text);
+      max-width: 800px;
+      margin: auto;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+
+    nav {
+      background: #e6f0fc;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
     nav a {
       margin-right: 1rem;
       text-decoration: none;
-      color: #0070f3;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    main p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    a.email-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a.email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Contact & Support</h1>
+  <header>
+    <h1>Contact & Support</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/join.html">Join</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="/">Home</a>
-    <a href="/join.html">Join</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+  <main>
+    <p>Have a question, feature idea, or need support?</p>
+    <p>We’d love to hear from you. Email us directly at:</p>
+    <p><a class="email-link" href="mailto:neil.james@keyrd.org">neil.james@keyrd.org</a></p>
+    <p>We typically respond within 1–2 business days.</p>
+  </main>
 
-  <p>Have a question, feedback, or support request?</p>
-  <p>Email us at: <a href="mailto:neil.james@keyrd.org">neil.james@keyrd.org</a></p>
-  <p>We do our best to respond within 1–2 business days.</p>
+  <footer>
+    &copy; 2025 KeyRD. Built with clarity, powered by empathy.
+  </footer>
 </body>
 </html>
