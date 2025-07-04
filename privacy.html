@@ -5,38 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | KeyRD</title>
   <style>
+    :root {
+      --primary: #0070f3;
+      --background: #f9f9f9;
+      --text: #333;
+      --radius: 8px;
+    }
+
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
       padding: 2rem;
+      background: var(--background);
+      color: var(--text);
       max-width: 800px;
       margin: auto;
-      background-color: #f9f9f9;
     }
-    h1 { color: #0070f3; }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+
     nav {
-      margin-top: 2rem;
+      background: #e6f0fc;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      margin-top: 1rem;
+      margin-bottom: 2rem;
     }
+
     nav a {
       margin-right: 1rem;
       text-decoration: none;
-      color: #0070f3;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    main p {
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
+  <header>
+    <h1>Privacy Policy</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/join.html">Join</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="/">Home</a>
-    <a href="/join.html">Join</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+  <main>
+    <p><strong>Last updated: July 4, 2025</strong></p>
 
-  <p><strong>Last updated: July 4, 2025</strong></p>
-  <p>Your privacy is important to us. KeyRD does not collect personally identifiable information without your consent. If we access health-related data, we treat it with strict confidentiality and follow HIPAA-aligned best practices, even if not legally required.</p>
-  <p>We do not share, sell, or trade your data. Usage data may be used to improve the service, and crash logs may be collected to improve reliability. You can request data deletion at any time by emailing <a href="mailto:neil.james@keyrd.org">neil.james@keyrd.org</a>.</p>
-  <p>This policy will be updated as features evolve.</p>
+    <p>Your privacy is important to us. KeyRD collects only the minimum necessary information to deliver a personalized experience, and only with your explicit consent.</p>
+
+    <p>If we access health-related or biometric data, we do so with strict respect for your privacy. While KeyRD is not a HIPAA-covered entity, we voluntarily adhere to HIPAA-aligned data handling principles including encryption, transparency, and user control.</p>
+
+    <p>We do not share, sell, or trade your personal information. Anonymous usage data may be used to improve KeyRD’s performance and reliability. You may request complete data deletion at any time by contacting us at <a href="mailto:neil.james@keyrd.org">neil.james@keyrd.org</a>.</p>
+
+    <p>We regularly review and update this policy as KeyRD evolves.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 KeyRD. Privacy is not a feature — it's a foundation.
+  </footer>
 </body>
 </html>
