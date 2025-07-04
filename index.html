@@ -23,7 +23,13 @@
     }
 
     header {
+      text-align: center;
       margin-bottom: 2rem;
+    }
+
+    header img {
+      height: 50px;
+      margin-bottom: 0.75rem;
     }
 
     h1 {
@@ -34,15 +40,23 @@
 
     p.tagline {
       font-size: 1.1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       font-weight: 500;
       color: #444;
+    }
+
+    p.beta-warning {
+      font-size: 0.95rem;
+      color: #b30000;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
     }
 
     nav {
       background: #e6f0fc;
       padding: 0.75rem 1rem;
       border-radius: var(--radius);
+      text-align: center;
       margin-bottom: 2rem;
     }
 
@@ -96,17 +110,19 @@
 </head>
 <body>
   <header>
+    <a href="/"><img src="assets/logo.png" alt="KeyRD Logo" /></a>
     <h1>KeyRD</h1>
     <p class="tagline">Personalized nutrition nudges, grounded in clinical science—without the hassle of food tracking.</p>
-
-    <nav>
-      <a href="/">Home</a>
-      <a href="/join.html">Join</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
+    <p class="beta-warning">🚧 This site is in active beta development. Features, content, and layout are subject to change.</p>
   </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/join.html">Join</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
 
   <main>
     <section class="features">
