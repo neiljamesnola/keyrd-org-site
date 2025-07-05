@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact & Support | KeyRD</title>
+  <title>Contact | KeyRD</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header>
     <a href="/"><img src="assets/logo.png" alt="KeyRD Logo" /></a>
-    <h1>Contact & Support</h1>
+    <h1>Contact Us</h1>
   </header>
 
   <nav>
@@ -22,14 +22,24 @@
   </nav>
 
   <main>
-    <p>Have a question, idea, or need technical help?</p>
-    <p>We’re here to support your journey. Email us at:</p>
-    <p><a class="email" href="mailto:support@keyrd.org">support@keyrd.org</a></p>
-    <p>We typically reply within 1–2 business days.</p>
+    <p class="tagline">We’d love to hear from you. Use the form below or email us directly at <a href="mailto:hello@keyrd.org">hello@keyrd.org</a>.</p>
+
+    <form method="POST" action="/success.html">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="button">Send Message</button>
+    </form>
   </main>
 
   <footer>
-    &copy; 2025 KeyRD. Designed for clarity, built for behavior change.
+    &copy; 2025 KeyRD. Privacy-respecting, science-based, user-powered.
   </footer>
 </body>
 </html>
