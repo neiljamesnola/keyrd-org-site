@@ -1,1 +1,103 @@
+:root {
+  --primary: #0070f3;
+  --background: #f9f9f9;
+  --text: #333;
+  --radius: 8px;
+}
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: var(--background);
+  color: var(--text);
+  max-width: 800px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  background: #e6f0fc;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+main {
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+main ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+main li {
+  margin-bottom: 0.75rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+
+a.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+a.button:hover {
+  background: #005bb5;
+}
+
+a.email,
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.email:hover,
+footer a:hover {
+  text-decoration: underline;
+}
