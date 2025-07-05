@@ -4,73 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | KeyRD</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <section class="section">
-    <div class="container has-text-centered">
-      <a href="/"><img src="assets/logo.png" alt="KeyRD Logo" style="width:72px; height:72px;" /></a>
-      <h1 class="title is-3 has-text-primary mt-3">Contact Us</h1>
-    </div>
+  <header>
+    <a href="/"><img src="assets/logo.png" alt="KeyRD Logo" /></a>
+    <h1>Contact KeyRD</h1>
+  </header>
 
-    <nav class="navbar is-light mt-4" role="navigation">
-      <div class="navbar-menu is-active is-flex is-justify-content-center">
-        <a class="navbar-item" href="/">Home</a>
-        <a class="navbar-item" href="/join.html">Join</a>
-        <a class="navbar-item" href="/privacy.html">Privacy</a>
-        <a class="navbar-item" href="/terms.html">Terms</a>
-        <a class="navbar-item is-active" href="/contact.html">Contact</a>
-        <a class="navbar-item" href="/nudge.html">Nudge</a>
-      </div>
-    </nav>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/join.html">Join</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/nudge.html">Nudge</a>
+  </nav>
 
-    <div class="container mt-6">
-      <p class="subtitle has-text-centered">Have a question, idea, or issue? Reach out—we’d love to hear from you.</p>
+  <main>
+    <p class="tagline">Questions, ideas, or just want to connect? Send us a message. We read every note, and we’re here to help.</p>
 
-      <form method="POST" action="/success.html" class="box">
-        <div class="field">
-          <label class="label">Full Name *</label>
-          <div class="control">
-            <input class="input" type="text" name="name" required />
-          </div>
-        </div>
+    <form method="POST" action="/success.html">
+      <fieldset>
+        <legend>Your Info</legend>
+        <label>Name *</label>
+        <input type="text" name="name" required />
 
-        <div class="field">
-          <label class="label">Email Address *</label>
-          <div class="control">
-            <input class="input" type="email" name="email" required />
-          </div>
-        </div>
+        <label>Email *</label>
+        <input type="email" name="email" required />
+      </fieldset>
 
-        <div class="field">
-          <label class="label">Message *</label>
-          <div class="control">
-            <textarea class="textarea" name="message" rows="5" required></textarea>
-          </div>
-        </div>
+      <fieldset>
+        <legend>Your Message</legend>
+        <label>Subject *</label>
+        <input type="text" name="subject" required />
 
-        <div class="field is-grouped is-justify-content-center mt-4">
-          <div class="control">
-            <button class="button is-primary" type="submit">Send Message</button>
-          </div>
-        </div>
-      </form>
+        <label>Message *</label>
+        <textarea name="message" rows="6" required></textarea>
+      </fieldset>
 
-      <p class="has-text-centered is-size-7 mt-5">
-        Prefer email? Reach us directly at
-        <a href="mailto:contact@keyrd.org">contact@keyrd.org</a>.
-      </p>
-    </div>
-  </section>
+      <p style="text-align:center;">Or email us directly at <a href="mailto:contact@keyrd.org">contact@keyrd.org</a></p>
 
-  <footer class="footer mt-6">
-    <div class="content has-text-centered is-size-7">
-      &copy; 2025 KeyRD. Privacy-respecting, science-based, user-powered.
-    </div>
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 KeyRD. Privacy-respecting, science-based, user-powered.
   </footer>
 </body>
 </html>
-
   <footer>
     &copy; 2025 KeyRD. Privacy-respecting, science-based, user-powered.
   </footer>
