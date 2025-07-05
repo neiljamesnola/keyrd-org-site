@@ -1,0 +1,175 @@
+:root {
+  --primary: #003366;
+  --accent: #0070f3;
+  --background: #f9f9f9;
+  --text: #333;
+  --radius: 10px;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --form-width: 100%;
+  --form-max-width: 650px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: var(--background);
+  color: var(--text);
+  max-width: 1000px;
+  margin: auto;
+}
+
+header.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-nav img.logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  background: #e6f0fc;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+nav a.cta-link {
+  padding: 0.4rem 1rem;
+  background: var(--accent);
+  color: white;
+  border-radius: var(--radius);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+main ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+main li {
+  margin-bottom: 0.75rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+
+a.button, button.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+a.button:hover, button.button:hover {
+  background: #005bb5;
+}
+
+.join-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.join-form {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: var(--form-width);
+  max-width: var(--form-max-width);
+  margin-top: 1rem;
+}
+
+.join-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.join-form legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.join-form label {
+  display: block;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.join-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+a.email,
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.email:hover,
+footer a:hover {
+  text-decoration: underline;
+}
