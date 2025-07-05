@@ -3,38 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KeyRD | Beta</title>
+  <title>KeyRD | Personalized Wellness Nudges</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header>
-    <a href="/"><img src="assets/logo.png" alt="KeyRD Logo" /></a>
-    <h1 class="beta-warning">🚧 This site is in active beta development. Features, content, and layout are subject to change.</h1>
+  <header class="site-header">
+    <div class="logo-nav">
+      <img src="assets/logo.png" alt="KeyRD Logo" class="logo" />
+      <nav>
+        <a href="/join.html">Join</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html" class="cta-link">Contact</a>
+      </nav>
+    </div>
   </header>
-  
-  <nav>
-    <a href="/">Home</a>
-    <a href="/join.html">Join</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/nudge.html">Nudge</a>
-  </nav>
 
-  <main>
-    <p class="tagline">Personalized nutrition nudges, grounded in clinical science—without the hassle of food tracking.</p>
+  <main class="hero">
+    <section class="hero-content">
+      <div class="text-block">
+        <h1>Personalized wellness nudges</h1>
+        <p>Grounded in clinical science and focused on your health goals.</p>
+        <a href="/join.html" class="button">Join the Beta</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-illustration.png" alt="Person with phone" />
+      </div>
+    </section>
 
-    <h2>What Makes KeyRD Different?</h2>
-    <ul>
-      <li>📱 Just-in-time dietary nudges powered by AI and behavior science</li>
-      <li>📊 Integration with your biometrics, lifestyle, and clinical goals</li>
-      <li>🛡️ Privacy-focused and built for ethical, long-term health behavior change</li>
-      <li>🚫 No manual food logging, calorie counting, or unsustainable gimmicks</li>
-      <li>🔬 Evidence-based approach rooted in clinical nutrition and research</li>
-    </ul>
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <img src="assets/onboarding.png" alt="Onboarding" />
+          <h3>Complete onboarding</h3>
+          <p>Provide info about your health, diet preferences, and lifestyle.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/nudges.png" alt="Nudges" />
+          <h3>Receive real-time nudges</h3>
+          <p>Get gentle reminders and tailored, actionable guidance.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/progress.png" alt="Progress tracking" />
+          <h3>Track your progress</h3>
+          <p>Monitor your journey with helpful feedback and insights.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Ready to Join?</h2>
-    <p><a href="/join.html" class="button">Join the Beta</a></p>
+    <section class="data-callout">
+      <h2>Your Data, Empowered</h2>
+      <div class="data-image">
+        <img src="assets/data-empowered.png" alt="Data Empowered" />
+      </div>
+    </section>
   </main>
 
   <footer>
