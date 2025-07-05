@@ -1,31 +1,25 @@
-/* Import Pico.css */
-@import url("https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css");
+/* Import Bulma */
+@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css");
 
-/* Optional: override container width */
+/* Center content and constrain width */
 body {
   max-width: 800px;
-  margin: auto;
+  margin: 2rem auto;
   padding: 2rem;
 }
 
-/* Optional: tweak logo image */
+/* Logo tweaks */
 header img {
   width: 72px;
   height: 72px;
   object-fit: contain;
   background-color: #ffffff;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   margin-bottom: 0.5rem;
 }
 
-/* Optional: center align text in header */
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Optional: lighten footer */
+/* Footer styling */
 footer {
   margin-top: 3rem;
   font-size: 0.85rem;
