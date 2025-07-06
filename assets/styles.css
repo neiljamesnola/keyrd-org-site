@@ -31,7 +31,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 2rem 0;
-  background: white(--banner-bg);
+  background: var(--banner-bg);
 }
 
 header img {
@@ -71,7 +71,7 @@ nav a.active {
   padding: 2rem 2rem 3rem;
   flex-wrap: wrap;
   gap: 2rem;
-  background: var(--banner-bg);
+  background: white(--banner-bg);
 }
 
 .hero img {
