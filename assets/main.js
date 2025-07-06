@@ -1,11 +1,10 @@
-// Toggle mobile nav visibility
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector("nav");
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
 
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
+  if (toggleButton && navLinks) {
+    toggleButton.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
     });
   }
 });
