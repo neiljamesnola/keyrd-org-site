@@ -245,22 +245,26 @@
         </fieldset>
 
         <fieldset>
-          <legend>Daily Check-in (Optional)</legend>
-          <label for="mood">Mood</label>
-          <input type="range" id="mood" name="mood" min="1" max="5" />
+  <legend>Daily Check-In (Optional)</legend>
+  <p style="margin-bottom: 1rem; color: #555;">
+    Help us understand how you're feeling today. These quick responses personalize your nudges and can be skipped any time.
+  </p>
 
-          <label for="stress_level">Stress Level</label>
-          <input type="range" id="stress_level" name="stress_level" min="1" max="5" />
+  <label for="mood">Mood (1 = Low, 5 = Great)</label>
+  <input type="range" id="mood" name="mood" min="1" max="5" />
 
-          <label for="hunger">Hunger</label>
-          <input type="range" id="hunger" name="hunger" min="1" max="5" />
+  <label for="stress_level">Stress Level (1 = Calm, 5 = Very Stressed)</label>
+  <input type="range" id="stress_level" name="stress_level" min="1" max="5" />
 
-          <label for="cravings">Cravings</label>
-          <input type="range" id="cravings" name="cravings" min="1" max="5" />
+  <label for="hunger">Hunger (1 = Not Hungry, 5 = Very Hungry)</label>
+  <input type="range" id="hunger" name="hunger" min="1" max="5" />
 
-          <label for="energy_level">Energy Level</label>
-          <input type="range" id="energy_level" name="energy_level" min="1" max="5" />
-        </fieldset>
+  <label for="cravings">Cravings (1 = None, 5 = Strong)</label>
+  <input type="range" id="cravings" name="cravings" min="1" max="5" />
+
+  <label for="energy_level">Energy Level (1 = Very Low, 5 = Full of Energy)</label>
+  <input type="range" id="energy_level" name="energy_level" min="1" max="5" />
+</fieldset>
 
         <div style="text-align:center; margin-top: 2rem;">
           <button type="submit" class="button">Submit Profile</button>
