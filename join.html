@@ -6,6 +6,18 @@
   <title>KeyRD | Personalized Precision Nutrition</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="icon" href="assets/favicon.ico" />
+  <style>
+    .plus-button {
+      margin-top: 0.5rem;
+      display: inline-block;
+      background: #00b3a4;
+      color: white;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header class="main-header">
@@ -27,7 +39,7 @@
   <main class="hero">
     <div class="hero-text">
       <h1>Join the KeyRD Beta</h1>
-      <p>Help us shape the future of precision nutrition. This onboarding form ensures your experience is customized from day one.</p>
+      <p>Help us shape the future of precision nutrition. Your responses personalize your experience and power behaviorally smart nudges.</p>
     </div>
   </main>
 
@@ -35,195 +47,64 @@
     <div class="container">
       <form method="POST" action="/success.html">
 
-        <!-- Identity -->
-        <fieldset>
-          <legend>Identity & Consent</legend>
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required />
+        <!-- Updated Stage of Change -->
+        <label>Which statement best describes your mindset about health change? *</label>
+        <select name="readiness_stage" required>
+          <option value="">Select...</option>
+          <option value="precontemplation">I'm not considering change right now</option>
+          <option value="contemplation">I'm thinking about making a change</option>
+          <option value="preparation">I'm planning to start soon</option>
+          <option value="action">I've recently started</option>
+          <option value="maintenance">I've been maintaining for a while</option>
+        </select>
 
-          <label for="consent">Consent to Data Tracking *</label>
-          <select id="consent" name="consent_to_track" required>
-            <option value="">Select...</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
+        <!-- Updated Why This Goal? -->
+        <label>Why is this goal important to you? *</label>
+        <select name="why_this_goal[]" multiple required>
+          <option value="self_confidence">Improve self-confidence</option>
+          <option value="live_longer">Live longer</option>
+          <option value="reduce_meds">Reduce medications</option>
+          <option value="look_better">Look better</option>
+          <option value="feel_better">Feel better physically</option>
+          <option value="set_example">Set a good example</option>
+          <option value="doctor_advice">Doctor advised me to</option>
+          <option value="other">Other</option>
+        </select>
 
-          <label for="device_type">Device Type *</label>
-          <select id="device_type" name="device_type" required>
-            <option value="">Select...</option>
-            <option value="iOS">iOS</option>
-            <option value="Android">Android</option>
-            <option value="Wearable">Wearable</option>
-          </select>
+        <!-- Updated Diet Type -->
+        <label>Diet Type *</label>
+        <select id="diet_type" name="diet_type" required>
+          <option value="">Select...</option>
+          <option value="omnivore">Omnivore</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="pescatarian">Pescatarian</option>
+          <option value="dash">DASH</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="text" name="diet_type_other" placeholder="If other, please specify" />
 
-          <label for="os_version">OS Version *</label>
-          <input type="text" id="os_version" name="os_version" required />
-        </fieldset>
+        <!-- Addable Food Allergies -->
+        <label>Food Allergies *</label>
+        <div id="allergy-container">
+          <input type="text" name="food_allergies[]" required />
+        </div>
+        <button type="button" class="plus-button" onclick="addAllergy()">+ Add Another Allergy</button>
 
-        <!-- Demographics -->
-        <fieldset>
-          <legend>Demographics</legend>
-          <label for="age">Age *</label>
-          <input type="number" id="age" name="age" min="10" max="120" required />
+        <!-- Addable Food Avoidances -->
+        <label>Food Avoidances *</label>
+        <div id="avoidance-container">
+          <input type="text" name="food_avoidances[]" required />
+        </div>
+        <button type="button" class="plus-button" onclick="addAvoidance()">+ Add Another Avoidance</button>
 
-          <label for="sex">Sex *</label>
-          <select id="sex" name="sex" required>
-            <option value="">Select...</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="nonbinary">Nonbinary</option>
-            <option value="prefer_not_to_say">Prefer not to say</option>
-          </select>
-
-          <label for="zip_code">Zip Code *</label>
-          <input type="text" id="zip_code" name="zip_code" required />
-        </fieldset>
-
-        <!-- Goals & Behavior -->
-        <fieldset>
-          <legend>Goals & Behavior</legend>
-          <label for="readiness_stage">Stage of Change *</label>
-          <select id="readiness_stage" name="readiness_stage" required>
-            <option value="">Select...</option>
-            <option value="precontemplation">Precontemplation</option>
-            <option value="contemplation">Contemplation</option>
-            <option value="preparation">Preparation</option>
-            <option value="action">Action</option>
-            <option value="maintenance">Maintenance</option>
-          </select>
-
-          <label for="goal_type">Primary Health Goal *</label>
-          <select id="goal_type" name="goal_type" required>
-            <option value="">Select...</option>
-            <option value="weight_loss">Weight Loss</option>
-            <option value="labs">Improve Labs</option>
-            <option value="bp">Lower Blood Pressure</option>
-            <option value="energy">Increase Energy</option>
-            <option value="mood">Improve Mood</option>
-          </select>
-
-          <label for="why_this_goal">Why This Goal? *</label>
-          <textarea id="why_this_goal" name="why_this_goal" rows="3" required></textarea>
-
-          <label for="nudge_style">Preferred Nudge Style *</label>
-          <select id="nudge_style" name="nudge_style" required>
-            <option value="">Select...</option>
-            <option value="gentle">Gentle</option>
-            <option value="motivating">Motivating</option>
-            <option value="directive">Directive</option>
-            <option value="humorous">Humorous</option>
-          </select>
-
-          <label for="nudge_frequency_cap">Max Nudges per Day (1–5) *</label>
-          <input type="number" id="nudge_frequency_cap" name="nudge_frequency_cap" min="1" max="5" required />
-
-          <label for="quiet_hours">Quiet Hours (e.g. 21:00–07:00) *</label>
-          <input type="text" id="quiet_hours" name="quiet_hours" required />
-        </fieldset>
-
-        <!-- Dietary Needs -->
-        <fieldset>
-          <legend>Dietary Needs</legend>
-          <label for="diet_type">Diet Type *</label>
-          <select id="diet_type" name="diet_type" required>
-            <option value="">Select...</option>
-            <option value="omnivore">Omnivore</option>
-            <option value="vegetarian">Vegetarian</option>
-            <option value="vegan">Vegan</option>
-            <option value="pescatarian">Pescatarian</option>
-            <option value="dash">DASH</option>
-          </select>
-
-          <label for="food_allergies">Food Allergies *</label>
-          <textarea id="food_allergies" name="food_allergies" required></textarea>
-
-          <label for="food_avoidances">Food Avoidances *</label>
-          <textarea id="food_avoidances" name="food_avoidances" required></textarea>
-
-          <label for="food_likes">Food Likes (Optional)</label>
-          <textarea id="food_likes" name="food_likes"></textarea>
-
-          <label for="food_dislikes">Food Dislikes (Optional)</label>
-          <textarea id="food_dislikes" name="food_dislikes"></textarea>
-
-          <label for="religious_diet_rules">Religious Diet Rules (Optional)</label>
-          <textarea id="religious_diet_rules" name="religious_diet_rules"></textarea>
-        </fieldset>
-
-        <!-- Clinical -->
-        <fieldset>
-          <legend>Clinical</legend>
-          <label for="chronic_conditions">Chronic Conditions *</label>
-          <textarea id="chronic_conditions" name="chronic_conditions" required></textarea>
-
-          <label for="med_schedule">Medication Schedule (Optional)</label>
-          <textarea id="med_schedule" name="med_schedule"></textarea>
-        </fieldset>
-
-        <!-- Schedule -->
-        <fieldset>
-          <legend>Schedule</legend>
-          <label for="wake_time">Wake Time *</label>
-          <input type="time" id="wake_time" name="wake_time" required />
-
-          <label for="sleep_time">Sleep Time *</label>
-          <input type="time" id="sleep_time" name="sleep_time" required />
-
-          <label for="work_hours">Work Hours *</label>
-          <input type="text" id="work_hours" name="work_hours" required />
-
-          <label for="meal_windows">Meal Windows (Optional)</label>
-          <input type="text" id="meal_windows" name="meal_windows" />
-
-          <label for="transportation_access">Transportation Access (Optional)</label>
-          <select id="transportation_access" name="transportation_access">
-            <option value="">Select...</option>
-            <option value="car">Own Vehicle</option>
-            <option value="public">Public Transport</option>
-            <option value="none">No Access</option>
-          </select>
-        </fieldset>
-
-        <!-- Sociodemographics -->
-        <fieldset>
-          <legend>Sociodemographics</legend>
-          <label for="education_level">Education Level (Optional)</label>
-          <select id="education_level" name="education_level">
-            <option value="">Select...</option>
-            <option value="lt_hs">Less than High School</option>
-            <option value="hs">High School</option>
-            <option value="some_college">Some College</option>
-            <option value="college">College Graduate</option>
-            <option value="grad">Graduate Degree</option>
-          </select>
-
-          <label for="financial_status">Financial Status (Optional)</label>
-          <select id="financial_status" name="financial_status">
-            <option value="">Select...</option>
-            <option value="low">Low</option>
-            <option value="moderate">Moderate</option>
-            <option value="high">High</option>
-          </select>
-        </fieldset>
-
-        <!-- Daily Check-in -->
-        <fieldset>
-          <legend>Daily Check-in (Optional)</legend>
-          <label for="mood">Mood</label>
-          <input type="range" id="mood" name="mood" min="1" max="5" />
-
-          <label for="stress_level">Stress Level</label>
-          <input type="range" id="stress_level" name="stress_level" min="1" max="5" />
-
-          <label for="hunger">Hunger</label>
-          <input type="range" id="hunger" name="hunger" min="1" max="5" />
-
-          <label for="cravings">Cravings</label>
-          <input type="range" id="cravings" name="cravings" min="1" max="5" />
-
-          <label for="energy_level">Energy Level</label>
-          <input type="range" id="energy_level" name="energy_level" min="1" max="5" />
-        </fieldset>
+        <!-- Addable Medications -->
+        <label>Medications (Optional)</label>
+        <div id="meds-container">
+          <input type="text" name="medications[]" placeholder="Medication name" />
+          <input type="text" name="med_times[]" placeholder="e.g., 8:00 AM, 9:00 PM" />
+        </div>
+        <button type="button" class="plus-button" onclick="addMedication()">+ Add Another Medication</button>
 
         <div style="text-align:center; margin-top: 2rem;">
           <button type="submit" class="button">Submit Profile</button>
@@ -231,7 +112,42 @@
       </form>
     </div>
   </section>
-<script src="/assets/main.js"></script>
+
+  <script>
+    function addAllergy() {
+      const container = document.getElementById("allergy-container");
+      const input = document.createElement("input");
+      input.type = "text";
+      input.name = "food_allergies[]";
+      input.required = true;
+      container.appendChild(input);
+    }
+
+    function addAvoidance() {
+      const container = document.getElementById("avoidance-container");
+      const input = document.createElement("input");
+      input.type = "text";
+      input.name = "food_avoidances[]";
+      input.required = true;
+      container.appendChild(input);
+    }
+
+    function addMedication() {
+      const container = document.getElementById("meds-container");
+      const medInput = document.createElement("input");
+      medInput.type = "text";
+      medInput.name = "medications[]";
+      medInput.placeholder = "Medication name";
+
+      const timeInput = document.createElement("input");
+      timeInput.type = "text";
+      timeInput.name = "med_times[]";
+      timeInput.placeholder = "e.g., 8:00 AM, 9:00 PM";
+
+      container.appendChild(medInput);
+      container.appendChild(timeInput);
+    }
+  </script>
 
   <footer>
     &copy; 2025 KeyRD. Privacy-respecting, science-based, user-powered.
