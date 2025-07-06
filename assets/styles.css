@@ -1,4 +1,4 @@
-/* KeyRD Stylesheet - Modern Layout */
+/* KeyRD Stylesheet - Refined Modern Layout */
 
 :root {
   --primary: #003f8a;
@@ -26,27 +26,34 @@ body {
   padding: 2rem;
 }
 
-header {
+/* HEADER */
+header.main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 2rem 0;
   background: var(--banner-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-header img {
-  width: 72px;
-  height: auto;
-  border: 1px solid #ccc;
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-logo {
+  height: 64px;
+  width: auto;
   border-radius: var(--radius);
   background: white;
+  padding: 0.25rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 nav {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
-  margin: 1rem 0;
 }
 
 nav a {
@@ -63,7 +70,7 @@ nav a.active {
   background: rgba(0, 63, 138, 0.1);
 }
 
-/* HERO SECTION — Centered with Stacked Layout */
+/* HERO SECTION */
 .hero {
   display: flex;
   flex-direction: column-reverse;
@@ -136,7 +143,7 @@ section h2 {
 }
 
 .step img {
-  max-width: 72px;
+  max-width: 64px;
   margin: 0 auto 1rem;
 }
 
@@ -164,8 +171,15 @@ section h2 {
 }
 
 .footer-section img {
-  max-width: 200px;
-  margin-bottom: 1rem;
+  width: 180px;
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  color: var(--muted);
 }
 
 footer {
@@ -173,14 +187,11 @@ footer {
   text-align: center;
   font-size: 0.85rem;
   color: var(--muted);
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
+/* Universal image handling */
 img {
   display: block;
   max-width: 100%;
