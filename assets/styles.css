@@ -1,10 +1,10 @@
-/* Updated KeyRD Stylesheet */
+/* KeyRD Stylesheet - Modern Layout */
 
 :root {
   --primary: #003f8a;
   --accent: #00b3a4;
   --text: #1a1a1a;
-  --background: #fdfdfd;
+  --background: #ffffff;
   --muted: #666;
   --radius: 12px;
   --font: 'Segoe UI', sans-serif;
@@ -63,46 +63,43 @@ nav a.active {
   background: rgba(0, 63, 138, 0.1);
 }
 
+/* HERO SECTION — Centered with Stacked Layout */
 .hero {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem 2rem 3rem;
-  flex-wrap: wrap;
-  gap: 2rem;
-  background: white(--banner-bg);
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
 }
 
 .hero img {
-  max-width: 300px;
-  height: auto;
+  max-width: 280px;
+  margin-bottom: 2rem;
 }
 
-.hero-text {
-  flex: 1;
-  min-width: 280px;
+.hero-text h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.hero h1 {
-  font-size: 2.2rem;
-  margin: 0 0 0.5rem;
-}
-
-.hero p {
-  color: var(--muted);
+.hero-text p {
   font-size: 1.1rem;
-  margin-bottom: 1.25rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
 }
 
 a.button {
   background: var(--primary);
   color: #fff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   border: none;
-  border-radius: var(--radius);
+  border-radius: 2rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1rem;
   display: inline-block;
   transition: background 0.3s;
 }
@@ -111,6 +108,7 @@ a.button:hover {
   background: #002d6b;
 }
 
+/* HOW IT WORKS SECTION */
 section {
   padding: 3rem 2rem;
   background: #fff;
@@ -126,7 +124,8 @@ section h2 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2.5rem;
+  padding-top: 2rem;
 }
 
 .step {
@@ -137,32 +136,36 @@ section h2 {
 }
 
 .step img {
-  max-width: 80px;
-  margin-bottom: 1rem;
+  max-width: 72px;
+  margin: 0 auto 1rem;
 }
 
 .step h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .step p {
-  color: var(--muted);
   font-size: 0.95rem;
+  color: var(--muted);
 }
 
+/* FOOTER SECTION */
 .footer-section {
   background: var(--banner-bg);
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 .footer-section h2 {
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .footer-section img {
-  max-width: 180px;
+  max-width: 200px;
+  margin-bottom: 1rem;
 }
 
 footer {
@@ -170,6 +173,12 @@ footer {
   text-align: center;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 img {
