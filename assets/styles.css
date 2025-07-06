@@ -42,12 +42,13 @@ header.main-header {
 }
 
 .main-logo {
-  height: 64px;
-  width: auto;
-  border-radius: var(--radius);
-  background: white;
-  padding: 0.25rem;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+header img {
+  width: 120px;         /* Increased from 72px */
+  height: auto;
+  border: none;         /* Removed border */
+  border-radius: 0;     /* No rounding needed now */
+  background: none;     /* Remove fallback white background */
+  margin: auto;         /* Keep centered in flex */
 }
 
 nav {
