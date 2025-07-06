@@ -36,12 +36,12 @@ body {
 }
 
 /* HEADER */
-header.main-header {
+  background-color: #ffffff;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: var(--banner-bg);
-  padding: 1rem;
+  align-items: center;
   flex-wrap: wrap;
 }
 
