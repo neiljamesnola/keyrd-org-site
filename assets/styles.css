@@ -42,7 +42,7 @@ header.main-header {
 }
 
 .main-logo {
-  height: 96px;           /* Increased from 64px */
+  height: 128px;           /* Increased from 64px */
   width: auto;
   border: none;           /* Removed border */
   background: none;       /* Transparent background */
