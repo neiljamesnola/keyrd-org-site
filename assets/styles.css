@@ -11,15 +11,20 @@
   --banner-bg: #f0f4f8;
 }
 
-body {
-  font-family: var(--font);
+body, h1, h2, h3, p, ul, ol, nav, header, footer, main {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
   background: var(--background);
   color: var(--text);
   line-height: 1.6;
 }
 
+/* Layout Container */
 .container {
   max-width: 1000px;
   margin: auto;
@@ -42,15 +47,16 @@ header.main-header {
 }
 
 .main-logo {
-  height: 128px;           /* Increased from 64px */
+  height: 128px;
   width: auto;
-  border: none;           /* Removed border */
-  background: none;       /* Transparent background */
-  padding: 0;             /* No padding */
-  box-shadow: none;       /* No shadow */
-  border-radius: 0;       /* No rounding */
+  border: none;
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
 }
 
+/* NAVIGATION */
 nav {
   display: flex;
   align-items: center;
@@ -99,6 +105,23 @@ nav a.active {
   margin-bottom: 2rem;
 }
 
+/* MAIN CONTENT */
+main {
+  padding: 1.5rem 2rem;
+  margin-top: 0.5rem;
+}
+
+/* HEADINGS */
+main h1,
+main h2 {
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+}
+
+/* BUTTONS */
 a.button {
   background: var(--primary);
   color: #fff;
